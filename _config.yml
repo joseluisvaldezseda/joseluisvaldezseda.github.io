@@ -1,0 +1,4 @@
+# _config.yml
+source: .
+sass:
+  sass_dir: sass
