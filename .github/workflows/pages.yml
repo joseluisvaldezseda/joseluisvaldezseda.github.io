@@ -19,7 +19,7 @@ jobs:
       - uses: actions/jekyll-build-pages@v1
         with:
           source: ./
-      - uses: actions/upload-pages-artifact@v2
+      - uses: actions/upload-pages-artifact@v3
 
   deploy:
     needs: build
