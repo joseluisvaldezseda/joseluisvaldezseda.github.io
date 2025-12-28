@@ -109,7 +109,7 @@
         }
         .project-card:hover { transform: translateY(-10px); border-color: var(--accent); }
         .project-img { width: 100%; height: 200px; object-fit: cover; }
-        .project-content { padding: 1.5rem; flex-grow: 1; }
+        .project-content { padding: 1.5rem; flex-grow: 1; display: flex; flex-direction: column; }
         .project-content h3 { margin-bottom: 1rem; font-size: 1.25rem; }
         .project-content p { color: var(--text-dim); font-size: 0.9rem; margin-bottom: 1.5rem; }
         .project-tags { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap; }
@@ -162,8 +162,8 @@
             </div>
 
             <div class="social-links" style="justify-content: flex-start;">
-                <a href="https://linkedin.com/in/jose-luis-valdez-seda"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/joseluisvaldezseda"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/jose-luis-valdez-seda" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/joseluisvaldezseda" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
                 <a href="mailto:joseluisvaldezseda@gmail.com"><i class="fas fa-envelope"></i></a>
             </div>
         </header>
@@ -198,7 +198,7 @@
             <h2 class="section-title">Featured Projects</h2>
             <div class="project-grid">
 
-                <!-- Project 1: Customer Clustering -->
+                <!-- Project: Retail BI -->
                 <div class="project-card">
                     <img src="images/Dashboard-Microsip.png" alt="Analytics Dashboard" class="project-img">
                     <div class="project-content">
@@ -206,13 +206,13 @@
                             <span class="tag">Data Engineering</span>
                             <span class="tag">ETL Pipeline</span>
                         </div>
-                        <h3>Analytics Dashboard</h3>
+                        <h3>Multi-Branch Retail Analytics</h3>
                         <p>End-to-end "Zero-Touch" ETL system and BI dashboard for 4 retail branches. Features automated profit leakage detection, price tampering audits, and YoY growth analytics.</p>
-                        <a href="https://github.com/joseluisvaldezseda/Firebird-ERP-Analytics-Dashboard" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        <a href="https://github.com/joseluisvaldezseda/Firebird-ERP-Analytics-Dashboard" target="_blank" rel="noopener noreferrer" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
-                <!-- Project 1: Customer Clustering -->
+                <!-- Project: Customer Intelligence -->
                 <div class="project-card">
                     <img src="images/RFM-Clustering.png" alt="Customer Intelligence" class="project-img">
                     <div class="project-content">
@@ -222,11 +222,11 @@
                         </div>
                         <h3>Customer Intelligence</h3>
                         <p>Advanced RFM clustering and churn prediction to segment 400k+ retail clients over a 36-month period.</p>
-                        <a href="https://github.com/joseluisvaldezseda/Customer-Clustering" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        <a href="https://github.com/joseluisvaldezseda/Customer-Clustering" target="_blank" rel="noopener noreferrer" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
-                <!-- Project 2: Price Optimization -->
+                <!-- Project: Price Optimization -->
                 <div class="project-card">
                     <img src="images/Pricing.png" alt="Price Optimization" class="project-img">
                     <div class="project-content">
@@ -236,11 +236,11 @@
                         </div>
                         <h3>Price Optimization Model</h3>
                         <p>Modeled demand and profit curves to determine optimal pricing strategies across 50,000+ retail SKUs.</p>
-                        <a href="https://github.com/joseluisvaldezseda/Price-Optimization-Model" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        <a href="https://github.com/joseluisvaldezseda/Price-Optimization-Model" target="_blank" rel="noopener noreferrer" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
-                <!-- Project 3: Credit Approval -->
+                <!-- Project: Credit Approval -->
                 <div class="project-card">
                     <img src="images/Credit-Rate.png" alt="Credit Approval" class="project-img">
                     <div class="project-content">
@@ -250,11 +250,11 @@
                         </div>
                         <h3>Credit Approval Estimation</h3>
                         <p>Developed a classification model to predict CRM approval likelihood using granular socio-demographic indicators.</p>
-                        <a href="https://github.com/joseluisvaldezseda/Authorization-Rate-Estimation" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        <a href="https://github.com/joseluisvaldezseda/Authorization-Rate-Estimation" target="_blank" rel="noopener noreferrer" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
-                <!-- Project 4: Strategic Risk -->
+                <!-- Project: Strategic Risk -->
                 <div class="project-card">
                     <img src="images/Risk.png" alt="Risk Analysis" class="project-img">
                     <div class="project-content">
@@ -264,11 +264,11 @@
                         </div>
                         <h3>Strategic Risk Analysis</h3>
                         <p>An interactive Streamlit application designed to identify and visualize high-risk departments within retail operations.</p>
-                        <a href="https://github.com/joseluisvaldezseda/Risk-Analysis" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        <a href="https://github.com/joseluisvaldezseda/Risk-Analysis" target="_blank" rel="noopener noreferrer" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
-                <!-- Project 5: Socioeconomic -->
+                <!-- Project: Socioeconomic -->
                 <div class="project-card">
                     <img src="images/Classification.png" alt="Socioeconomic" class="project-img">
                     <div class="project-content">
@@ -278,11 +278,11 @@
                         </div>
                         <h3>Socioeconomic Classification</h3>
                         <p>Predicting household socioeconomic status across Mexican states using advanced machine learning classifiers.</p>
-                        <a href="https://github.com/joseluisvaldezseda/Socioeconomic-Status-Classification-Model" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        <a href="https://github.com/joseluisvaldezseda/Socioeconomic-Status-Classification-Model" target="_blank" rel="noopener noreferrer" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
-                <!-- Project 6: Demand Forecast -->
+                <!-- Project: Demand Forecast -->
                 <div class="project-card">
                     <img src="images/Forecast-Demand.png" alt="Demand Forecast" class="project-img">
                     <div class="project-content">
@@ -292,11 +292,11 @@
                         </div>
                         <h3>Demand Forecasting</h3>
                         <p>Accurate demand prediction models to optimize inventory planning and supply chain efficiency.</p>
-                        <a href="https://github.com/joseluisvaldezseda/Forecast-Demand" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        <a href="https://github.com/joseluisvaldezseda/Forecast-Demand" target="_blank" rel="noopener noreferrer" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
-                <!-- Project 7: COVID Modeling -->
+                <!-- Project: COVID Modeling -->
                 <div class="project-card">
                     <img src="images/Covid.png" alt="COVID Modeling" class="project-img">
                     <div class="project-content">
@@ -306,11 +306,11 @@
                         </div>
                         <h3>Mathematical COVID Modeling</h3>
                         <p>Predictive simulations using Markov chains and Monte Carlo methods to forecast pandemic wave trends.</p>
-                        <a href="https://github.com/joseluisvaldezseda/Mathematical-Modeling-of-COVID" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        <a href="https://github.com/joseluisvaldezseda/Mathematical-Modeling-of-COVID" target="_blank" rel="noopener noreferrer" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
-                <!-- Project 8: Astronomy -->
+                <!-- Project: Astronomy -->
                 <div class="project-card">
                     <img src="images/Planets.png" alt="Astronomy Modeling" class="project-img">
                     <div class="project-content">
@@ -320,7 +320,7 @@
                         </div>
                         <h3>Planet Stability Modeling</h3>
                         <p>Numerical modeling of circumbinary planetary orbits to study long-term stability and habitability.</p>
-                        <a href="https://github.com/joseluisvaldezseda/Circumbinary-Planet-Stability" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        <a href="https://github.com/joseluisvaldezseda/Circumbinary-Planet-Stability" target="_blank" rel="noopener noreferrer" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -329,8 +329,8 @@
 
         <footer>
             <div class="social-links">
-                <a href="https://linkedin.com/in/jose-luis-valdez-seda"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/joseluisvaldezseda"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/jose-luis-valdez-seda" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/joseluisvaldezseda" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
             </div>
             <p style="color: var(--text-dim); font-size: 0.8rem;">&copy; 2024 Jose Luis Valdez. Built for Professional Excellence.</p>
         </footer>
@@ -338,6 +338,3 @@
 
 </body>
 </html>
-
-
-
