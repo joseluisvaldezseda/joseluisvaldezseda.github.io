@@ -1,209 +1,269 @@
-<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Jose Luis Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jose Luis Valdez | Data Scientist & AI Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+            --accent: #38bdf8;
+            --accent-hover: #0ea5e9;
+        }
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>Jose Luis Portfolio<br />
-						</h1>
-						<p> Data Scientist passionate about turning data into actionable insights through analytics, modeling, and technology.
-  <a href="https://linkedin.com/in/jose-luis-valdez-seda">@joseluis</a> <a href="https://html5up.net"></a><br />
-						 <a href="https://html5up.net/license"></a></p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+        /* Layout */
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Jose Luis Portfolio</a>
-					</header>
+        /* Navigation */
+        nav {
+            padding: 1.5rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+        .logo { font-weight: 800; font-size: 1.2rem; letter-spacing: -1px; }
+        .nav-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            margin-left: 2rem;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+        .nav-links a:hover { color: var(--accent); }
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">Projects</a></li>
-						<!--	<li><a href="generic.html">Resume</a></li>-->
-						<!-- <li><a href="elements.html">Elements Reference</a></li>-->
-						</ul>
-						<ul class="icons">
-									<li><a href="https://linkedin.com/in/jose-luis-valdez-seda" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
-									<li><a href="https://github.com/joseluisvaldezseda" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+        /* Hero Section */
+        header {
+            padding: 8rem 0 4rem;
+            max-width: 800px;
+        }
+        h1 { font-size: 4rem; font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem; }
+        .gradient-text {
+            background: linear-gradient(90deg, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-p { font-size: 1.25rem; color: var(--text-dim); margin-bottom: 2rem; }
 
-				<!-- Main -->
-					<div id="main">
+        /* Stats/Badges */
+        .pills { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 3rem; }
+        .pill {
+            background: var(--card-bg);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            border: 1px solid #334155;
+        }
 
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<h2><a href="https://github.com/joseluisvaldezseda/Customer-Clustering">Customer Intelligence: Dynamic Modeling and Clustering<br />
-									</a></h2>
-									<p>This project combines RFM-based clustering and churn prediction modeling to deeply characterize customer behavior over 36 months. By leveraging purchase patterns, frequency, recency, and qualitative variables, it identifies actionable segments, enhances retention strategies, and supports data-driven decisions through a detailed understanding of customer value and risk.</p>
-								</header>
-								<a href="https://github.com/joseluisvaldezseda/Customer-Clustering" style="display: flex; justify-content: center;" class="image main"><img src="images/RFM-Clustering.png" alt="" style="width: 900px !important; height: auto !important;" /></a>
-								<ul class="actions special">
-									<li><a href="https://github.com/joseluisvaldezseda/Customer-Clustering" class="button large">View Project</a></li>
-								</ul>
-							</article>
+        /* Section Headers */
+        section { padding: 5rem 0; }
+        .section-title { font-size: 2rem; margin-bottom: 3rem; display: flex; align-items: center; gap: 1rem; }
+        .section-title::after { content: ""; height: 1px; flex: 1; background: #334155; }
 
-						<!-- Posts -->
-							<section class="posts">
-									<article>
-										<header>
-						
-										<h2><a href="https://github.com/joseluisvaldezseda/Customer-Churn">Customer Churn<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/joseluisvaldezseda/Customer-Churn" class="image fit"><img src="images/Churn.png" alt="" /></a>
-									<p>We developed a churn prediction model to identify customers most likely to discontinue service, enabling targeted retention strategies.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/joseluisvaldezseda/Customer-Churn" class="button">View Project</a></li>
-									</ul>
-								</article>
-								<article>
-										<header>
-						
-										<h2><a href="https://github.com/joseluisvaldezseda/Forecast-Demand">Forecast Demand<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/joseluisvaldezseda/Forecast-Demand" class="image fit"><img src="images/Forecast-Demand.png" alt="" /></a>
-									<p>We developed a demand forecasting model to accurately predict future product demand and optimize inventory planning.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/joseluisvaldezseda/Forecast-Demand" class="button">View Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-						
-										<h2><a href="https://github.com/joseluisvaldezseda/Price-Optimization-Model">Price Optimization Model<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/joseluisvaldezseda/Price-Optimization-Model" class="image fit"><img src="images/Pricing.png" alt="" /></a>
-									<p>We developed a price optimization model based on demand and profit curves to determine the optimal pricing for products across various retail SKUs.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/joseluisvaldezseda/Price-Optimization-Model" class="button">View Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-								
-										<h2><a href="https://github.com/joseluisvaldezseda/Socioeconomic-Status-Classification-Model">Socioeconomic Classification<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/joseluisvaldezseda/Socioeconomic-Status-Classification-Model" class="image fit"><img src="images/Classification.png" alt="" /></a>
-									<p>We built a machine learning model to classify households across different Mexican states and predict their socioeconomic status.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/joseluisvaldezseda/Socioeconomic-Status-Classification-Model" class="button">View Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-						
-										<h2><a href="https://github.com/joseluisvaldezseda/Authorization-Rate-Estimation">Credit Approval Rate Estimation<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/joseluisvaldezseda/Authorization-Rate-Estimation" class="image fit"><img src="images/Credit-Rate.png" alt="" /></a>
-									<p>We developed a classification model to predict CRM approval likelihood using socio-demographic indicators aggregated at the block level.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/joseluisvaldezseda/Authorization-Rate-Estimation" class="button">View Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-							
-										<h2><a href="https://github.com/joseluisvaldezseda/Risk-Analysis">Strategic Risk Analysis<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/joseluisvaldezseda/Risk-Analysis" class="image fit"><img src="images/Risk.png" alt="" /></a>
-									<p>In this project, we developed an interactive Streamlit app to identify high-risk departments within the retail business.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/joseluisvaldezseda/Risk-Analysis" class="button">View Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-			
-										<h2><a href="https://github.com/joseluisvaldezseda/Mathematical-Modeling-of-COVID">Mathematical Modeling of COVID<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/joseluisvaldezseda/Mathematical-Modeling-of-COVID" class="image fit"><img src="images/Covid.png" alt="" /></a>
-									<p>We developed a predictive model using Monte Carlo simulations and Markov chains to forecast COVID-19 waves.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/joseluisvaldezseda/Mathematical-Modeling-of-COVID" class="button">View Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										<h2><a href="https://github.com/joseluisvaldezseda/Circumbinary-Planet-Stability">Circumbinary Planet Stability<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/joseluisvaldezseda/Circumbinary-Planet-Stability" class="image fit"><img src="images/Planets.png" alt="" /></a>
-									<p> We modeled circumbinary planet orbits using numerical methods to study stability and habitability.    </p>
-									<ul class="actions special">
-										<li><a href="https://github.com/joseluisvaldezseda/Circumbinary-Planet-Stability" class="button">View Project</a></li>
-									</ul>
-								</article>
-							</section>
+        /* Experience Card */
+        .exp-card {
+            border-left: 2px solid var(--accent);
+            padding-left: 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        .exp-card h3 { font-size: 1.5rem; margin-bottom: 0.25rem; }
+        .exp-company { color: var(--accent); font-weight: 600; margin-bottom: 0.5rem; display: block; }
+        .exp-date { font-size: 0.85rem; color: var(--text-dim); margin-bottom: 1rem; display: block; }
+        .exp-card ul { list-style: none; color: var(--text-dim); }
+        .exp-card li { margin-bottom: 0.5rem; position: relative; }
+        .exp-card li::before { content: "→"; color: var(--accent); position: absolute; left: -1.5rem; }
 
+        /* Project Grid */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        .project-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            border: 1px solid #334155;
+            display: flex;
+            flex-direction: column;
+        }
+        .project-card:hover { transform: translateY(-10px); border-color: var(--accent); }
+        .project-img { width: 100%; height: 200px; object-fit: cover; }
+        .project-content { padding: 1.5rem; flex-grow: 1; }
+        .project-content h3 { margin-bottom: 1rem; font-size: 1.25rem; }
+        .project-content p { color: var(--text-dim); font-size: 0.9rem; margin-bottom: 1.5rem; }
+        .project-tags { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap; }
+        .tag { font-size: 0.7rem; color: var(--accent); font-weight: 700; text-transform: uppercase; }
+        .project-link {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
 
+        /* Footer */
+        footer { padding: 4rem 0; border-top: 1px solid #334155; text-align: center; }
+        .social-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; }
+        .social-links a { color: var(--text-main); font-size: 1.5rem; transition: 0.3s; }
+        .social-links a:hover { color: var(--accent); }
 
-						<section class="split contact">
-							<section class="alt">
-								<h3>Location</h3>
-								<p>Colima, Mexico<br />
-								</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">(+52) 312-122-6667</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">joseluisvaldezseda@gmail.com</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="https://linkedin.com/in/jose-luis-valdez-seda" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
-									<li><a href="https://github.com/joseluisvaldezseda" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
 
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
+    <div class="container">
+        <nav>
+            <div class="logo">JV.DATA</div>
+            <div class="nav-links">
+                <a href="#experience">Experiencia</a>
+                <a href="#projects">Proyectos</a>
+                <a href="mailto:joseluisvaldezseda@gmail.com">Contacto</a>
+            </div>
+        </nav>
 
-			</div>
+        <header>
+            <h1>Hola, soy Jose Luis.<br><span class="gradient-text">Data Scientist & AI Engineer.</span></h1>
+            <p class="hero-p">Optimizo operaciones a través de datos. Actualmente liderando modelos de forecasting en <b>DXC Technology (PepsiCo)</b>. Experto en convertir 1TB de datos diarios en decisiones estratégicas.</p>
+            
+            <div class="pills">
+                <span class="pill"><i class="fab fa-python"></i> Python & PySpark</span>
+                <span class="pill"><i class="fas fa-database"></i> SQL & Databricks</span>
+                <span class="pill"><i class="cloud fas fa-cloud"></i> Azure Data Factory</span>
+                <span class="pill"><i class="fas fa-chart-bar"></i> Power BI</span>
+                <span class="pill"><i class="fas fa-robot"></i> MLOps & CI/CD</span>
+            </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+            <div class="social-links" style="justify-content: flex-start;">
+                <a href="https://linkedin.com/in/jose-luis-valdez-seda"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/joseluisvaldezseda"><i class="fab fa-github"></i></a>
+                <a href="mailto:joseluisvaldezseda@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </header>
 
-	</body>
+        <section id="experience">
+            <h2 class="section-title">Experiencia Profesional</h2>
+            
+            <div class="exp-card">
+                <span class="exp-company">DXC Technology (Client: PepsiCo)</span>
+                <h3>Associate Manager Data Science</h3>
+                <span class="exp-date">Ago 2025 — Presente</span>
+                <ul>
+                    <li>Liderazgo de modelos de forecasting y recomendaciones de crédito para PepsiCo.</li>
+                    <li>Despliegue de pipelines escalables usando PySpark y Databricks.</li>
+                    <li>Coordinación de equipos multidisciplinarios para alineación de objetivos de negocio.</li>
+                </ul>
+            </div>
+
+            <div class="exp-card">
+                <span class="exp-company">Bodesa SAPI de CV</span>
+                <h3>Data Scientist</h3>
+                <span class="exp-date">Ago 2024 — Ago 2025</span>
+                <ul>
+                    <li>Despliegue de +5 modelos ML en producción, mejorando eficiencia operativa en 18%.</li>
+                    <li>Diseño de pipelines ETL en Azure procesando 1TB de datos transaccionales diarios.</li>
+                    <li>Implementación de CI/CD para reentrenamiento automático, reduciendo tiempos de despliegue en 35%.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2 class="section-title">Proyectos Destacados</h2>
+            <div class="project-grid">
+                
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <img src="images/RFM-Clustering.png" alt="Customer Intelligence" class="project-img">
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Machine Learning</span>
+                            <span class="tag">Clustering</span>
+                        </div>
+                        <h3>Customer Intelligence Modeling</h3>
+                        <p>Segmentación de 400k+ clientes mediante RFM y predicción de Churn para optimizar la retención.</p>
+                        <a href="https://github.com/joseluisvaldezseda/Customer-Clustering" class="project-link">Ver Código <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <img src="images/Pricing.png" alt="Price Optimization" class="project-img">
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Optimization</span>
+                            <span class="tag">Python</span>
+                        </div>
+                        <h3>Retail Price Optimization</h3>
+                        <p>Modelado de curvas de demanda y ganancia para optimizar precios en más de 50,000 SKUs.</p>
+                        <a href="https://github.com/joseluisvaldezseda/Price-Optimization-Model" class="project-link">Ver Código <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <img src="images/Classification.png" alt="Socioeconomic" class="project-img">
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Classification</span>
+                            <span class="tag">Geospatial</span>
+                        </div>
+                        <h3>Socioeconomic Classification</h3>
+                        <p>Modelo ML para predecir niveles socioeconómicos en hogares mexicanos basado en indicadores demográficos.</p>
+                        <a href="https://github.com/joseluisvaldezseda/Socioeconomic-Status-Classification-Model" class="project-link">Ver Código <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <img src="images/Forecast-Demand.png" alt="Demand Forecast" class="project-img">
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Time Series</span>
+                            <span class="tag">Forecasting</span>
+                        </div>
+                        <h3>Demand Forecasting</h3>
+                        <p>Predicción de demanda futura para optimización de inventarios y cadena de suministro.</p>
+                        <a href="https://github.com/joseluisvaldezseda/Forecast-Demand" class="project-link">Ver Código <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <footer>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/jose-luis-valdez-seda"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/joseluisvaldezseda"><i class="fab fa-github"></i></a>
+            </div>
+            <p style="color: var(--text-dim); font-size: 0.8rem;">&copy; 2024 Jose Luis Valdez. Diseñado para impacto profesional.</p>
+        </footer>
+    </div>
+
+</body>
 </html>
-
