@@ -201,6 +201,19 @@
         }
         .project-link:hover { color: var(--accent); }
 
+        /* --- COPIA DESDE AQUÍ --- */
+        .project-actions {
+            display: flex;
+            gap: 1.2rem;
+            margin-top: auto; /* Empuja los botones al final de la tarjeta */
+            padding-top: 1rem;
+        }
+        
+        .project-link {
+            margin-top: 0 !important; 
+            padding-top: 0 !important;
+        }
+        /* --- HASTA AQUÍ --- */
         /* About Section */
         .about-text { color: var(--text-dim); font-size: 1.1rem; max-width: 800px; }
         .highlight { color: var(--text-main); font-weight: 600; }
@@ -309,7 +322,16 @@
                         </div>
                         <h3>Multi-Branch Retail Analytics</h3>
                         <p>End-to-end "Zero-Touch" ETL system and BI dashboard for 4 retail branches. Features automated profit leakage detection and YoY growth analytics.</p>
-                        <a href="https://github.com/joseluisvaldezseda/Firebird-ERP-Analytics-Dashboard" target="_blank" rel="noopener noreferrer" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                        
+                        <!-- AQUÍ ESTÁ EL CAMBIO -->
+                        <div class="project-actions">
+                            <a href="https://firebird-erp-analytics-dashboard.streamlit.app/" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/joseluisvaldezseda/Firebird-ERP-Analytics-Dashboard" target="_blank" rel="noopener noreferrer" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
@@ -485,5 +507,6 @@
 
 </body>
 </html>
+
 
 
