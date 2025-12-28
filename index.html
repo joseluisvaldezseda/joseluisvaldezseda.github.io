@@ -44,7 +44,29 @@
             backdrop-filter: blur(10px);
             z-index: 100;
         }
-        .logo { font-weight: 800; font-size: 1.2rem; letter-spacing: -1px; color: var(--accent); }
+        /* 1. Modifica el contenedor del logo para que el icono y el texto estén alineados */
+        .logo { 
+            font-weight: 800; 
+            font-size: 1.2rem; 
+            letter-spacing: -1px; 
+            color: var(--text-main); 
+            display: flex; 
+            align-items: center; 
+            gap: 0.7rem; /* Espacio entre el átomo y el texto */
+        }
+        
+        /* 2. Dale color y tamaño al icono del átomo */
+        .logo-icon {
+            color: var(--accent); /* Color azul brillante */
+            font-size: 1.6rem;
+            animation: rotate-atom 15s linear infinite; /* Animación de rotación lenta */
+        }
+        
+        /* 3. La animación para que el átomo gire suavemente */
+        @keyframes rotate-atom {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
         .nav-links a {
             color: var(--text-dim);
             text-decoration: none;
@@ -191,7 +213,8 @@
 
     <div class="container">
         <nav>
-            <div class="logo">JV.DATA</div>
+            <div class="logo">
+            <i class="fas fa-atom logo-icon"></i> JV.DATA</div>
             <div class="nav-links">
                 <a href="#about">About</a>
                 <a href="#experience">Experience</a>
@@ -451,3 +474,4 @@
 
 </body>
 </html>
+
