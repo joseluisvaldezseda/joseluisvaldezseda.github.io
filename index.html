@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,7 +53,7 @@
         /* Hero Section */
         header {
             padding: 8rem 0 4rem;
-            max-width: 800px;
+            max-width: 850px;
         }
         h1 { font-size: 4rem; font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem; }
         .gradient-text {
@@ -122,6 +122,7 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            margin-top: auto;
         }
 
         /* Footer */
@@ -142,21 +143,21 @@
         <nav>
             <div class="logo">JV.DATA</div>
             <div class="nav-links">
-                <a href="#experience">Experiencia</a>
-                <a href="#projects">Proyectos</a>
-                <a href="mailto:joseluisvaldezseda@gmail.com">Contacto</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="mailto:joseluisvaldezseda@gmail.com">Contact</a>
             </div>
         </nav>
 
         <header>
-            <h1>Hola, soy Jose Luis.<br><span class="gradient-text">Data Scientist & AI Engineer.</span></h1>
-            <p class="hero-p">Optimizo operaciones a través de datos. Actualmente liderando modelos de forecasting en <b>DXC Technology (PepsiCo)</b>. Experto en convertir 1TB de datos diarios en decisiones estratégicas.</p>
+            <h1>Hi, I'm Jose Luis.<br><span class="gradient-text">Data Scientist & AI Engineer.</span></h1>
+            <p class="hero-p">Bridging the gap between complex data and actionable business strategy through <b>scalable AI solutions</b> and <b>robust data engineering</b>. Currently driving forecasting excellence at <b>DXC Technology (PepsiCo)</b>.</p>
             
             <div class="pills">
                 <span class="pill"><i class="fab fa-python"></i> Python & PySpark</span>
                 <span class="pill"><i class="fas fa-database"></i> SQL & Databricks</span>
-                <span class="pill"><i class="cloud fas fa-cloud"></i> Azure Data Factory</span>
-                <span class="pill"><i class="fas fa-chart-bar"></i> Power BI</span>
+                <span class="pill"><i class="cloud fas fa-cloud"></i> Azure Cloud (ADF)</span>
+                <span class="pill"><i class="fas fa-chart-bar"></i> Power BI & Streamlit</span>
                 <span class="pill"><i class="fas fa-robot"></i> MLOps & CI/CD</span>
             </div>
 
@@ -168,78 +169,106 @@
         </header>
 
         <section id="experience">
-            <h2 class="section-title">Experiencia Profesional</h2>
+            <h2 class="section-title">Professional Experience</h2>
             
             <div class="exp-card">
                 <span class="exp-company">DXC Technology (Client: PepsiCo)</span>
                 <h3>Associate Manager Data Science</h3>
-                <span class="exp-date">Ago 2025 — Presente</span>
+                <span class="exp-date">Aug 2025 — Present</span>
                 <ul>
-                    <li>Liderazgo de modelos de forecasting y recomendaciones de crédito para PepsiCo.</li>
-                    <li>Despliegue de pipelines escalables usando PySpark y Databricks.</li>
-                    <li>Coordinación de equipos multidisciplinarios para alineación de objetivos de negocio.</li>
+                    <li>Leading forecasting models and credit offer recommendations for PepsiCo's global client base.</li>
+                    <li>Architecting scalable data pipelines and predictive models using PySpark and Databricks.</li>
+                    <li>Managing cross-functional alignment between technical solutions and business growth KPIs.</li>
                 </ul>
             </div>
 
             <div class="exp-card">
                 <span class="exp-company">Bodesa SAPI de CV</span>
                 <h3>Data Scientist</h3>
-                <span class="exp-date">Ago 2024 — Ago 2025</span>
+                <span class="exp-date">Aug 2024 — Aug 2025</span>
                 <ul>
-                    <li>Despliegue de +5 modelos ML en producción, mejorando eficiencia operativa en 18%.</li>
-                    <li>Diseño de pipelines ETL en Azure procesando 1TB de datos transaccionales diarios.</li>
-                    <li>Implementación de CI/CD para reentrenamiento automático, reduciendo tiempos de despliegue en 35%.</li>
+                    <li>Deployed 5+ ML models into production, achieving an 18% improvement in operational efficiency.</li>
+                    <li>Engineered ETL pipelines in Azure handling massive transactional datasets for real-time analytics.</li>
+                    <li>Established CI/CD workflows for automated model retraining, reducing deployment cycles by 35%.</li>
                 </ul>
             </div>
         </section>
 
         <section id="projects">
-            <h2 class="section-title">Proyectos Destacados</h2>
+            <h2 class="section-title">Featured Projects</h2>
             <div class="project-grid">
                 
-                <!-- Project 1 -->
+                <!-- Project 1: Customer Clustering -->
                 <div class="project-card">
                     <img src="images/RFM-Clustering.png" alt="Customer Intelligence" class="project-img">
                     <div class="project-content">
                         <div class="project-tags">
                             <span class="tag">Machine Learning</span>
-                            <span class="tag">Clustering</span>
+                            <span class="tag">RFM</span>
                         </div>
-                        <h3>Customer Intelligence Modeling</h3>
-                        <p>Segmentación de 400k+ clientes mediante RFM y predicción de Churn para optimizar la retención.</p>
-                        <a href="https://github.com/joseluisvaldezseda/Customer-Clustering" class="project-link">Ver Código <i class="fas fa-arrow-right"></i></a>
+                        <h3>Customer Intelligence</h3>
+                        <p>Advanced RFM clustering and churn prediction to segment 400k+ retail clients over a 36-month period.</p>
+                        <a href="https://github.com/joseluisvaldezseda/Customer-Clustering" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
-                <!-- Project 2 -->
+                <!-- Project 2: Price Optimization -->
                 <div class="project-card">
                     <img src="images/Pricing.png" alt="Price Optimization" class="project-img">
                     <div class="project-content">
                         <div class="project-tags">
                             <span class="tag">Optimization</span>
-                            <span class="tag">Python</span>
+                            <span class="tag">Retail</span>
                         </div>
-                        <h3>Retail Price Optimization</h3>
-                        <p>Modelado de curvas de demanda y ganancia para optimizar precios en más de 50,000 SKUs.</p>
-                        <a href="https://github.com/joseluisvaldezseda/Price-Optimization-Model" class="project-link">Ver Código <i class="fas fa-arrow-right"></i></a>
+                        <h3>Price Optimization Model</h3>
+                        <p>Modeled demand and profit curves to determine optimal pricing strategies across 50,000+ retail SKUs.</p>
+                        <a href="https://github.com/joseluisvaldezseda/Price-Optimization-Model" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
-                <!-- Project 3 -->
+                <!-- Project 3: Credit Approval -->
+                <div class="project-card">
+                    <img src="images/Credit-Rate.png" alt="Credit Approval" class="project-img">
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Classification</span>
+                            <span class="tag">Finance</span>
+                        </div>
+                        <h3>Credit Approval Estimation</h3>
+                        <p>Developed a classification model to predict CRM approval likelihood using granular socio-demographic indicators.</p>
+                        <a href="https://github.com/joseluisvaldezseda/Authorization-Rate-Estimation" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 4: Strategic Risk -->
+                <div class="project-card">
+                    <img src="images/Risk.png" alt="Risk Analysis" class="project-img">
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Streamlit</span>
+                            <span class="tag">Risk Analysis</span>
+                        </div>
+                        <h3>Strategic Risk Analysis</h3>
+                        <p>An interactive Streamlit application designed to identify and visualize high-risk departments within retail operations.</p>
+                        <a href="https://github.com/joseluisvaldezseda/Risk-Analysis" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 5: Socioeconomic -->
                 <div class="project-card">
                     <img src="images/Classification.png" alt="Socioeconomic" class="project-img">
                     <div class="project-content">
                         <div class="project-tags">
-                            <span class="tag">Classification</span>
-                            <span class="tag">Geospatial</span>
+                            <span class="tag">ML</span>
+                            <span class="tag">Demographics</span>
                         </div>
                         <h3>Socioeconomic Classification</h3>
-                        <p>Modelo ML para predecir niveles socioeconómicos en hogares mexicanos basado en indicadores demográficos.</p>
-                        <a href="https://github.com/joseluisvaldezseda/Socioeconomic-Status-Classification-Model" class="project-link">Ver Código <i class="fas fa-arrow-right"></i></a>
+                        <p>Predicting household socioeconomic status across Mexican states using advanced machine learning classifiers.</p>
+                        <a href="https://github.com/joseluisvaldezseda/Socioeconomic-Status-Classification-Model" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
-                <!-- Project 4 -->
+                <!-- Project 6: Demand Forecast -->
                 <div class="project-card">
                     <img src="images/Forecast-Demand.png" alt="Demand Forecast" class="project-img">
                     <div class="project-content">
@@ -248,8 +277,36 @@
                             <span class="tag">Forecasting</span>
                         </div>
                         <h3>Demand Forecasting</h3>
-                        <p>Predicción de demanda futura para optimización de inventarios y cadena de suministro.</p>
-                        <a href="https://github.com/joseluisvaldezseda/Forecast-Demand" class="project-link">Ver Código <i class="fas fa-arrow-right"></i></a>
+                        <p>Accurate demand prediction models to optimize inventory planning and supply chain efficiency.</p>
+                        <a href="https://github.com/joseluisvaldezseda/Forecast-Demand" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 7: COVID Modeling -->
+                <div class="project-card">
+                    <img src="images/Covid.png" alt="COVID Modeling" class="project-img">
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Monte Carlo</span>
+                            <span class="tag">Markov Chains</span>
+                        </div>
+                        <h3>Mathematical COVID Modeling</h3>
+                        <p>Predictive simulations using Markov chains and Monte Carlo methods to forecast pandemic wave trends.</p>
+                        <a href="https://github.com/joseluisvaldezseda/Mathematical-Modeling-of-COVID" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 8: Astronomy -->
+                <div class="project-card">
+                    <img src="images/Planets.png" alt="Astronomy Modeling" class="project-img">
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Physics</span>
+                            <span class="tag">Numerical Methods</span>
+                        </div>
+                        <h3>Planet Stability Modeling</h3>
+                        <p>Numerical modeling of circumbinary planetary orbits to study long-term stability and habitability.</p>
+                        <a href="https://github.com/joseluisvaldezseda/Circumbinary-Planet-Stability" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
 
@@ -261,7 +318,7 @@
                 <a href="https://linkedin.com/in/jose-luis-valdez-seda"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/joseluisvaldezseda"><i class="fab fa-github"></i></a>
             </div>
-            <p style="color: var(--text-dim); font-size: 0.8rem;">&copy; 2024 Jose Luis Valdez. Diseñado para impacto profesional.</p>
+            <p style="color: var(--text-dim); font-size: 0.8rem;">&copy; 2024 Jose Luis Valdez. Built for Professional Excellence.</p>
         </footer>
     </div>
 
