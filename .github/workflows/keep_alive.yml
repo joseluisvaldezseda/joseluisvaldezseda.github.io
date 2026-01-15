@@ -2,10 +2,8 @@ name: Keep Streamlit Apps Alive
 
 on:
   schedule:
-    # Se ejecuta cada 15 minutos (00, 15, 30, 45 de cada hora)
-    # Esto evita que el contenedor entre en modo "Sleep".
-    - cron: '*/15 * * * *'
-  workflow_dispatch: # Botón manual por si acaso
+    - cron: "*/15 * * * *"  
+  workflow_dispatch:
 
 jobs:
   ping_apps:
@@ -13,16 +11,12 @@ jobs:
     steps:
       - name: Wake up Streamlit Apps
         run: |
-          # El flag -A simula un navegador real para evitar bloqueos
-          # El flag -I pide solo la cabecera (rápido)
-          # El flag -L sigue redirecciones
-          
-          curl -I -L -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" https://forecast-demand-retail.streamlit.app/
-          curl -I -L -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" https://smartretail-crm-intelligence.streamlit.app/
-          curl -I -L -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" https://price-optimization-model.streamlit.app/
-          curl -I -L -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" https://socioeconomic-status-classification-model.streamlit.app/
-          curl -I -L -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" https://firebird-erp-analytics-dashboard.streamlit.app/
-          curl -I -L -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" https://risk-rate-estimation.streamlit.app/
-          curl -I -L -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" https://graficodinamico.streamlit.app/
-          curl -I -L -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" https://mathematical-modeling-of-covid.streamlit.app/
-          curl -I -L -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" https://circumbinary-planet-stability.streamlit.app/
+          curl -I -L -A "Mozilla/5.0" https://forecast-demand-retail.streamlit.app/
+          curl -I -L -A "Mozilla/5.0" https://smartretail-crm-intelligence.streamlit.app/
+          curl -I -L -A "Mozilla/5.0" https://price-optimization-model.streamlit.app/
+          curl -I -L -A "Mozilla/5.0" https://socioeconomic-status-classification-model.streamlit.app/
+          curl -I -L -A "Mozilla/5.0" https://firebird-erp-analytics-dashboard.streamlit.app/
+          curl -I -L -A "Mozilla/5.0" https://risk-rate-estimation.streamlit.app/
+          curl -I -L -A "Mozilla/5.0" https://graficodinamico.streamlit.app/
+          curl -I -L -A "Mozilla/5.0" https://mathematical-modeling-of-covid.streamlit.app/
+          curl -I -L -A "Mozilla/5.0" https://circumbinary-planet-stability.streamlit.app/
