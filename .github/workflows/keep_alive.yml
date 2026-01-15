@@ -1,0 +1,41 @@
+name: Keep Streamlit Apps Alive
+
+on:
+  schedule:
+    # Se ejecuta automáticamente todos los días a las 8:00 AM UTC
+    # Esto mantiene las apps activas y evita que Streamlit las apague por abandono.
+    - cron: '0 8 * * *'
+  workflow_dispatch: # Te permite ejecutarlo manualmente con un botón si lo necesitas
+
+jobs:
+  ping_apps:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wake up Streamlit Apps
+        run: |
+          # 1. Demand Forecasting
+          curl -I https://forecast-demand-retail.streamlit.app/
+          
+          # 2. Customer Intelligence
+          curl -I https://smartretail-crm-intelligence.streamlit.app/
+          
+          # 3. Price Optimization
+          curl -I https://price-optimization-model.streamlit.app/
+          
+          # 4. Socioeconomic Classification
+          curl -I https://socioeconomic-status-classification-model.streamlit.app/
+          
+          # 5. Multi-Branch Retail Analytics
+          curl -I https://firebird-erp-analytics-dashboard.streamlit.app/
+          
+          # 6. Credit Risk Scoring
+          curl -I https://risk-rate-estimation.streamlit.app/
+          
+          # 7. Strategic Risk Analysis
+          curl -I https://graficodinamico.streamlit.app/
+          
+          # 8. COVID Modeling
+          curl -I https://mathematical-modeling-of-covid.streamlit.app/
+          
+          # 9. Planet Stability Modeling
+          curl -I https://circumbinary-planet-stability.streamlit.app/
