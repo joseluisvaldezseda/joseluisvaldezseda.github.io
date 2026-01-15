@@ -2,7 +2,7 @@ name: Keep Streamlit Apps Alive
 
 on:
   schedule:
-    - cron: "*/15 * * * *"  
+    - cron: "*/15 * * * *"
   workflow_dispatch:
 
 jobs:
@@ -11,12 +11,18 @@ jobs:
     steps:
       - name: Wake up Streamlit Apps
         run: |
-          curl -I -L -A "Mozilla/5.0" https://forecast-demand-retail.streamlit.app/
-          curl -I -L -A "Mozilla/5.0" https://smartretail-crm-intelligence.streamlit.app/
-          curl -I -L -A "Mozilla/5.0" https://price-optimization-model.streamlit.app/
-          curl -I -L -A "Mozilla/5.0" https://socioeconomic-status-classification-model.streamlit.app/
-          curl -I -L -A "Mozilla/5.0" https://firebird-erp-analytics-dashboard.streamlit.app/
-          curl -I -L -A "Mozilla/5.0" https://risk-rate-estimation.streamlit.app/
-          curl -I -L -A "Mozilla/5.0" https://graficodinamico.streamlit.app/
-          curl -I -L -A "Mozilla/5.0" https://mathematical-modeling-of-covid.streamlit.app/
-          curl -I -L -A "Mozilla/5.0" https://circumbinary-planet-stability.streamlit.app/
+          # La bandera '|| true' al final asegura que GitHub marque exito siempre
+          # -s: Silent (no muestra barra de progreso)
+          # -o /dev/null: No guarda el archivo (solo lo visita)
+          
+          curl -s -o /dev/null https://forecast-demand-retail.streamlit.app/ || true
+          curl -s -o /dev/null https://smartretail-crm-intelligence.streamlit.app/ || true
+          curl -s -o /dev/null https://price-optimization-model.streamlit.app/ || true
+          curl -s -o /dev/null https://socioeconomic-status-classification-model.streamlit.app/ || true
+          curl -s -o /dev/null https://firebird-erp-analytics-dashboard.streamlit.app/ || true
+          curl -s -o /dev/null https://risk-rate-estimation.streamlit.app/ || true
+          curl -s -o /dev/null https://graficodinamico.streamlit.app/ || true
+          curl -s -o /dev/null https://mathematical-modeling-of-covid.streamlit.app/ || true
+          curl -s -o /dev/null https://circumbinary-planet-stability.streamlit.app/ || true
+          
+          echo "Todas las apps han sido visitadas."
