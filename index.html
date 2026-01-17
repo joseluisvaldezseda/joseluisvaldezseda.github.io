@@ -235,6 +235,94 @@
             h1 { font-size: 2.5rem; }
             .hero-image { width: 220px; height: 220px; }
         }
+
+        /* Estilos específicos para Educación y Publicaciones */
+            .edu-item { margin-bottom: 2rem; }
+            .edu-gpa { color: var(--accent); font-weight: 600; font-size: 0.9rem; margin-left: 0.5rem; }
+            .edu-pub {
+                display: flex;
+                align-items: flex-start;
+                gap: 0.5rem;
+                font-size: 0.85rem;
+                color: var(--text-dim);
+                text-decoration: none;
+                margin-top: 0.6rem;
+                transition: 0.3s;
+                padding: 0.5rem;
+                background: rgba(255, 255, 255, 0.03);
+                border-radius: 6px;
+            }
+            .edu-pub:hover { 
+                color: var(--accent); 
+                background: rgba(56, 189, 248, 0.08);
+                transform: translateX(5px);
+            }
+            .edu-pub i { margin-top: 3px; }
+
+            /* Seccion de Recomendaciones */
+            .testimonials-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+                gap: 2.5rem;
+            }
+            .testimonial-card {
+                background: var(--card-bg);
+                border: 1px solid #334155;
+                padding: 2.5rem;
+                border-radius: 16px;
+                transition: var(--transition);
+            }
+            .testimonial-card:hover {
+                border-color: var(--accent);
+                transform: translateY(-5px);
+            }
+            .testimonial-text {
+                color: var(--text-dim);
+                font-style: italic;
+                font-size: 0.95rem;
+                line-height: 1.7;
+                margin-bottom: 2rem;
+            }
+            .testimonial-author {
+                display: flex;
+                align-items: center;
+                gap: 1.2rem;
+            }
+            .author-img {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                object-fit: cover; /* Esto hace que la foto no se deforme */
+                border: 2px solid var(--accent);
+            }
+            .author-info h4 {
+                font-size: 1rem;
+                color: var(--text-main);
+                margin-bottom: 0.2rem;
+            }
+            .author-info p {
+                font-size: 0.8rem;
+                color: var(--accent);
+                font-weight: 500;
+            }
+            .author-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 5px;
+            }
+            .author-link {
+                color: var(--text-dim);
+                font-size: 0.8rem;
+                text-decoration: none;
+                transition: 0.3s;
+                display: flex;
+                align-items: center;
+                gap: 4px;
+            }
+            .author-link:hover {
+                color: var(--accent);
+            }
+
     </style>
 </head>
 <body>
@@ -518,20 +606,83 @@
             </div>
         </section>
         
+        <section id="recommendations" class="reveal">
+            <h2 class="section-title">Professional Endorsements</h2>
+            <div class="testimonials-grid">
+                
+                <!-- Recomendación de Jonathan Lagunas -->
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "During the time I’ve known Jose Luis, I’ve noticed his ability to quickly understand the business. Thanks to his strong knowledge in data science, our team developed analytical tools with direct business impact and improved decision-making efficiency."
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="images/jonathan.jpg" alt="Jonathan Lagunas" class="author-img">
+                        <div class="author-info">
+                            <h4>Jonathan Lagunas Ramírez</h4>
+                            <p>Subdirector of Intelligence | Bodesa</p>
+                            <div class="author-links">
+                                <a href="https://www.linkedin.com/in/jonathanlr12/" target="_blank" class="author-link">
+                                    <i class="fab fa-linkedin"></i> LinkedIn
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recomendación del Dr. Luis Enrique Garza -->
+               <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "Jose Luis has an exceptional capacity to analyze and synthesize information critically. His research on orthogonal polynomials for robust control systems demonstrates his ability to master complex topics and contribute original scientific knowledge."
+                    </p>
+                    <div class="testimonial-author">
+                        <img src="images/profesor.jpg" alt="Dr. Luis Enrique Garza" class="author-img">
+                        <div class="author-info">
+                            <h4>Dr. Luis Enrique Garza Gaona</h4>
+                            <p>Director of the Faculty of Science | UCOL</p>
+                            <div class="author-links">
+                                <a href="https://scholar.google.com.mx/citations?user=xLiAYmgAAAAJ&hl=es" target="_blank" class="author-link">
+                                    <i class="fas fa-graduation-cap"></i> Scholar
+                                </a>
+                                <!-- BOTÓN DE LA CARTA -->
+                                <a href="Recommendation_Letter_Dr_Garza.pdf" target="_blank" class="author-link" style="color: var(--accent); font-weight: 600;">
+                                    <i class="fas fa-file-pdf"></i> View Letter
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
         <section id="education" class="reveal">
-            <h2 class="section-title">Education & Skills</h2>
+            <h2 class="section-title">Education & Research</h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem;">
                 <div>
                     <h3 style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--accent);">Academic Background</h3>
-                    <div style="margin-bottom: 1.5rem;">
-                        <p class="highlight">M.Sc. in Process Engineering</p>
+                    
+                    <!-- Maestría -->
+                    <div class="edu-item">
+                        <p class="highlight">M.Sc. in Process Engineering <span class="edu-gpa">GPA 3.9/4.0</span></p>
                         <p style="color: var(--text-dim); font-size: 0.9rem;">University of Colima | 2022 - 2024</p>
+                        <a href="https://ieeexplore.ieee.org/document/10887206?source=authoralert" target="_blank" class="edu-pub">
+                            <i class="fas fa-file-alt"></i>
+                            <span><b>Publication:</b> New Tools for Tuning PID Controllers Using Orthogonal Polynomials (IEEE)</span>
+                        </a>
                     </div>
-                    <div>
-                        <p class="highlight">B.Sc. in Physics</p>
+
+                    <!-- Física -->
+                    <div class="edu-item">
+                        <p class="highlight">B.Sc. in Physics <span class="edu-gpa">GPA 3.8/4.0</span></p>
                         <p style="color: var(--text-dim); font-size: 0.9rem;">University of Colima | 2018 - 2022</p>
+                        <a href="https://arxiv.org/abs/2206.01354" target="_blank" class="edu-pub">
+                            <i class="fas fa-microscope"></i>
+                            <span><b>Research:</b> Quantum particles in a suddenly accelerating potential (arXiv)</span>
+                        </a>
                     </div>
                 </div>
+
                 <div>
                     <h3 style="font-size: 1.1rem; margin-bottom: 1.5rem; color: var(--accent);">Core Strengths</h3>
                     <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
@@ -540,10 +691,15 @@
                         <span class="pill">Predictive Analytics</span>
                         <span class="pill">Bilingual (EN/ES)</span>
                         <span class="pill">Deep Learning</span>
+                        <span class="pill">Scientific Computing</span>
+                        <span class="pill">PID Control Theory</span>
                     </div>
                 </div>
             </div>
         </section>
+
+        
+
 
         <section id="contact" class="reveal" style="text-align: center; padding: 6rem 0 4rem;">
             <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Let's build something great.</h2>
