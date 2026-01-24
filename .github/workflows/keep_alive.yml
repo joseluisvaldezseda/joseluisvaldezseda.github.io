@@ -2,10 +2,9 @@ name: Keep Streamlit Apps Alive
 
 on:
   schedule:
-    # Se ejecuta cada 12 horas (a las 00:00 y 12:00 UTC)
-    # Esto es suficiente para que Streamlit nunca cierre las apps por inactividad
-    - cron: "0 */12 * * *"
-  workflow_dispatch: # Permite que tu lo ejecutes manualmente cuando quieras
+    # Configurado para ejecutarse cada minuto (fines de prueba)
+    - cron: "* * * * *"
+  workflow_dispatch: # Permite ejecucion manual inmediata
 
 jobs:
   maintenance:
