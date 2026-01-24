@@ -2,8 +2,7 @@ name: Keep Streamlit Apps Alive
 
 on:
   schedule:
-    # Configurado para ejecutarse cada minuto (fines de prueba)
-    - cron: "* * * * *"
+    - cron: "0 */12 * * *"
   workflow_dispatch: # Permite ejecucion manual inmediata
 
 jobs:
