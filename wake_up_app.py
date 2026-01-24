@@ -8,7 +8,7 @@ APPS = [
     "https://price-optimization-model.streamlit.app/",
     "https://socioeconomic-status-classification-model.streamlit.app/",
     "https://firebird-erp-analytics-dashboard.streamlit.app/",
-    "https://risk-rate-estimation.streamlit.app/",
+    "https://apporization-rate-estimation.streamlit.app/",
     "https://quantitative-analysis.streamlit.app/",
     "https://mathematical-modeling-of-covid.streamlit.app/",
     "https://circumbinary-planet-stability.streamlit.app/"
