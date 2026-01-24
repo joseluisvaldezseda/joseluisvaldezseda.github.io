@@ -2,27 +2,28 @@ name: Keep Streamlit Apps Alive
 
 on:
   schedule:
-    - cron: "*/1 * * * *"
-  workflow_dispatch:
+    # Se ejecuta cada 12 horas (a las 00:00 y 12:00 UTC)
+    # Esto es suficiente para que Streamlit nunca cierre las apps por inactividad
+    - cron: "0 */12 * * *"
+  workflow_dispatch: # Permite que tu lo ejecutes manualmente cuando quieras
 
 jobs:
-  ping_apps:
+  maintenance:
     runs-on: ubuntu-latest
+    
     steps:
-      - name: Wake up Streamlit Apps
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Playwright and Dependencies
         run: |
-          # La bandera '|| true' al final asegura que GitHub marque exito siempre
-          # -s: Silent (no muestra barra de progreso)
-          # -o /dev/null: No guarda el archivo (solo lo visita)
-          
-          curl -s -o /dev/null https://forecast-demand-retail.streamlit.app/ || true
-          curl -s -o /dev/null https://smartretail-crm-intelligence.streamlit.app/ || true
-          curl -s -o /dev/null https://price-optimization-model.streamlit.app/ || true
-          curl -s -o /dev/null https://socioeconomic-status-classification-model.streamlit.app/ || true
-          curl -s -o /dev/null https://firebird-erp-analytics-dashboard.streamlit.app/ || true
-          curl -s -o /dev/null https://risk-rate-estimation.streamlit.app/ || true
-          curl -s -o /dev/null https://graficodinamico.streamlit.app/ || true
-          curl -s -o /dev/null https://mathematical-modeling-of-covid.streamlit.app/ || true
-          curl -s -o /dev/null https://circumbinary-planet-stability.streamlit.app/ || true
-          
-          echo "Todas las apps han sido visitadas."
+          pip install playwright
+          playwright install chromium --with-deps
+
+      - name: Run Maintenance Script
+        run: python wake_up_app.py
