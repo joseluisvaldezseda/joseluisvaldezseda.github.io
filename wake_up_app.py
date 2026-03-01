@@ -11,7 +11,8 @@ APPS = [
     "https://apporization-rate-estimation.streamlit.app/",
     "https://quantitative-analysis.streamlit.app/",
     "https://mathematical-modeling-of-covid.streamlit.app/",
-    "https://circumbinary-planet-stability.streamlit.app/"
+    "https://circumbinary-planet-stability.streamlit.app/",
+    "https://credit-scoring-ia.streamlit.app/"
 ]
 
 async def wake_app(browser, url):
